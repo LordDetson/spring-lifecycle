@@ -10,9 +10,32 @@
 	</parent>
 	<groupId>by.babanin.example</groupId>
 	<artifactId>spring-lifecycle</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-lifecycle</name>
+	<version>1.0</version>
+	<name>Spring Lifecycle Demo</name>
 	<description>The project demonstrates the life cycle of the Spring Framework</description>
+	<url>https://github.com/LordDetson/todo-manager-swing</url>
+	<inceptionYear>2023</inceptionYear>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>dbabanin</id>
+			<name>Dmitry Babanin</name>
+			<email>babanin.dima@gmail.com</email>
+			<timezone>Belarus/Minsk</timezone>
+			<properties>
+				<github>https://github.com/LordDetson</github>
+				<linkedin>https://www.linkedin.com/in/lorddetson/</linkedin>
+				<telegram>https://t.me/Lord_Detson</telegram>
+			</properties>
+		</developer>
+	</developers>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
