@@ -2,6 +2,7 @@ package by.babanin.example.springlifecycle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -9,7 +10,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import jakarta.annotation.Resource;
 
-public class TestBean implements InitializingBean, DisposableBean {
+public class TestBean implements InitializingBean, DisposableBean, BeanNameAware {
 
     private static final Logger log = LoggerFactory.getLogger(TestBean.class);
 
@@ -59,6 +60,13 @@ public class TestBean implements InitializingBean, DisposableBean {
 
     public void cleanUp() {
         LogUtils.infoWithStacktrace(log, "destroyMethod registered method");
+    }
+
+    // The standard set of *Aware interfaces
+
+    @Override
+    public void setBeanName(String name) {
+        LogUtils.infoWithStacktrace(log, "The standard set of *Aware interfaces");
     }
 
     // Setter-base Dependency Injection
